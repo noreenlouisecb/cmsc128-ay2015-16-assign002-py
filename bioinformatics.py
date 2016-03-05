@@ -39,3 +39,13 @@ def isValidString(str, alphabet):
         if(str[index] not in alphabet):
             return False
     return True
+
+def getSkew(str, n):
+    gCount = 0
+    cCount = 0
+    for index in range(0, n):
+        if(str[index] == "G"):
+            gCount += 1
+        elif(str[index] == "C"):
+            cCount += 1
+    return gCount - cCount
