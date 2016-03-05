@@ -8,5 +8,7 @@ def getHammingDistance(str1, str2):
             if(str1[index] != str2[index]):
                 counter+=1
         return counter
+    elif(len(str1) == 0 and len(str) == 0):
+        return "String length is zero(0). Invalid."
     else:
         return "Error! Strings are not equal!"
