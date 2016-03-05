@@ -33,3 +33,9 @@ def countSubstrPattern(original, pattern):
         return counter
     else:
         return 0
+
+def isValidString(str, alphabet):
+    for index in range(len(str)):
+        if(str[index] not in alphabet):
+            return False
+    return True
