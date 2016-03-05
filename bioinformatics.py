@@ -38,10 +38,10 @@ def isValidString(str, alphabet):
     for index in range(len(str)):
         if(str[index] not in alphabet):
             return False
+    return True
 
 def getSkew(str, n):
     if(len(str) > 0 and len(str) >= n and n >= 0):
-        return True
         gCount = 0
         cCount = 0
         for index in range(0, n):
