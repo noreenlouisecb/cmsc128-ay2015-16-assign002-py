@@ -38,10 +38,10 @@ def isValidString(str, alphabet):
     for index in range(len(str)):
         if(str[index] not in alphabet):
             return False
-    return True
 
 def getSkew(str, n):
-    if(len(str) > 0):
+    if(len(str) > 0 and len(str) >= n and n >= 0):
+        return True
         gCount = 0
         cCount = 0
         for index in range(0, n):
@@ -50,11 +50,13 @@ def getSkew(str, n):
             elif(str[index] == "C"):
                 cCount += 1
         return gCount - cCount
+    elif(len(str) <= n or n < 0):
+        return "Invalid n"
     else:
         return "Invalid string length"
 
 def getMaxSkewN(str, n):
-    if(len(str) > 0):
+    if(len(str) > 0 and len(str) >= n and n >= 0):
         gCount = 0
         cCount = 0
         gminusc = 0
@@ -69,14 +71,16 @@ def getMaxSkewN(str, n):
             else:
                 gminusc = gCount - cCount
         return gminusc
+    elif(len(str) <= n or n < 0):
+        return "Invalid n"
     else:
         return "Invalid string length"
 
 def getMinSkewN(str, n):
-    if(len(str) > 0):
-        gCount = 0
+    if(len(str) > 0 and len(str) >= n and n >= 0):
         cCount = 0
         gminusc = 0
+        gCount = 0
         for index in range(0, n):
             if(str[index] == "G"):
                 gCount += 1
@@ -88,5 +92,7 @@ def getMinSkewN(str, n):
             else:
                 gminusc = gCount - cCount
         return gminusc
+    elif(len(str) <= n or n < 0):
+        return "Invalid n"
     else:
         return "Invalid string length"
