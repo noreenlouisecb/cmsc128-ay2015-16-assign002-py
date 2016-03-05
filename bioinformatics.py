@@ -71,3 +71,22 @@ def getMaxSkewN(str, n):
         return gminusc
     else:
         return "Invalid string length"
+
+def getMinSkewN(str, n):
+    if(len(str) > 0):
+        gCount = 0
+        cCount = 0
+        gminusc = 0
+        for index in range(0, n):
+            if(str[index] == "G"):
+                gCount += 1
+            elif(str[index] == "C"):
+                cCount += 1
+            if(index != 0):
+                if(gminusc > gCount - cCount):
+                    gminusc = gCount - cCount
+            else:
+                gminusc = gCount - cCount
+        return gminusc
+    else:
+        return "Invalid string length"
