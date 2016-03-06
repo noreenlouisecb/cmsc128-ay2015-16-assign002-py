@@ -92,7 +92,7 @@ def getSkew(str, n):
     # checks if length of str is greater than 0
     # checks if length of str is greater than or equal to n
     # checks if n is greater than or equal to 0
-    if(len(str) > 0 and len(str) >= n and n >= 0):
+    if(len(str) > 0 and len(str) >= n and n > 0):
         gCount = 0
         cCount = 0
         # traverse per letter in a genome str
@@ -105,8 +105,8 @@ def getSkew(str, n):
                 cCount += 1
         # after traversing, return gCount - cCount
         return gCount - cCount
-    # if n is less than 0 or n is greater than the length of string
-    elif(len(str) <= n or n < 0):
+    # if n is less than or equal to 0 or n is greater than the length of string
+    elif(len(str) <= n or n <= 0):
         return "Invalid n"
     # if string length is less than 0
     else:
@@ -121,7 +121,7 @@ def getMaxSkewN(str, n):
     # checks if length of str is greater than 0
     # checks if length of str is greater than or equal to n
     # checks if n is greater than or equal to 0
-    if(len(str) > 0 and len(str) >= n and n >= 0):
+    if(len(str) > 0 and len(str) >= n and n > 0):
         gCount = 0
         cCount = 0
         gminusc = 0
@@ -141,8 +141,8 @@ def getMaxSkewN(str, n):
                 gminusc = gCount - cCount
         # return gminusc
         return gminusc
-    # if n is less than 0 or n is greater than the length of string
-    elif(len(str) <= n or n < 0):
+    # if n is less than or equal to 0 or n is greater than the length of string
+    elif(len(str) <= n or n <= 0):
         return "Invalid n"
     # if string length is less than 0
     else:
@@ -157,7 +157,7 @@ def getMinSkewN(str, n):
     # checks if length of str is greater than 0
     # checks if length of str is greater than or equal to n
     # checks if n is greater than or equal to 0
-    if(len(str) > 0 and len(str) >= n and n >= 0):
+    if(len(str) > 0 and len(str) >= n and n > 0):
         cCount = 0
         gminusc = 0
         gCount = 0
@@ -177,8 +177,8 @@ def getMinSkewN(str, n):
                 gminusc = gCount - cCount
         # return gminusc
         return gminusc
-    # if n is less than 0 or n is greater than the length of string
-    elif(len(str) <= n or n < 0):
+    # if n is less than or equal to 0 or n is greater than the length of string
+    elif(len(str) <= n or n <= 0):
         return "Invalid n"
     # if string length is less than 0
     else:
