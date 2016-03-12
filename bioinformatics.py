@@ -15,7 +15,6 @@
 def getHammingDistance(str1, str2):
     # str1 and str2 of same length wherein the length is greater than 0
     if(len(str1) == len(str2) and len(str1) > 0):
-        str1.upper(); str2.upper()
         counter = 0;
         # traverse each letter in str1
         for index in range(len(str1)):
