@@ -74,6 +74,12 @@ def countSubstrPattern(original, pattern):
 #   Return:     boolean; True if string is valid else False
 ###
 def isValidString(str, alphabet):
+    # checks if letters of alphabet is unique
+    for index in range(len(alphabet)):
+    	for index2 in range(index+1, len(alphabet)):
+    	    if(alphabet[index] == alphabet[index2]):
+    	    	return "Alphabet is not unique"
+    
     # traverse each letter in str
     for index in range(len(str)):
         # check if letter in str[index] is not in alphabet, return False
